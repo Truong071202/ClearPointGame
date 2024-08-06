@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ClearThePoint {
+  padding: 20px 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.points,
+.time {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 20px;
   align-items: center;
+}
+
+.points > p,
+.time > p {
+  width: 50px;
+  margin: 5px 60px 5px 0;
+}
+
+.play {
+  padding: 0 40px;
+}
+
+.box-game {
+  position: relative;
+  border: 2px solid black;
+  padding: 20px 40px;
+  margin: 20px 0;
+  width: 600px;
+  height: 400px;
+}
+
+.number {
+  position: absolute;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s, opacity 1s;
 }
 
-.App-link {
-  color: #61dafb;
+.number.active {
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.number.hidden {
+  display: none;
+}
+
+.play {
+  margin-top: 20px;
 }
